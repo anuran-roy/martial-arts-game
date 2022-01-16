@@ -69,7 +69,7 @@ let loadImages = (callback) => {
 
 let bgimg = document.createElement("img");
 bgimg.onload = () => callback(img);
-bgimg.src = "/images/background.jpg";
+bgimg.src = "images/background.jpg";
 
 let animate = (ctx, images, animation, callback, framerate = 15) => {
   images[animation].forEach((image, index) => {
