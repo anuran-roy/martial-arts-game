@@ -71,11 +71,11 @@ let bgimg = document.createElement("img");
 bgimg.onload = () => callback(img);
 bgimg.src = "images/background.jpg";
 
-let animate = (ctx, images, animation, callback, framerate = 15) => {
+let animate = (ctx, images, animation, callback, framerate = 10) => {
   images[animation].forEach((image, index) => {
     setTimeout(() => {
       ctx.clearRect(0, 0, c.width, c.height);
-      ctx.drawImage(bgimg, 0, 0, c.width, c.height);
+      // ctx.drawImage(bgimg, 0, 0, c.width, c.height);
       ctx.drawImage(image, 0, 0, c.width, c.height);
     }, (index * 1000) / framerate);
   });
